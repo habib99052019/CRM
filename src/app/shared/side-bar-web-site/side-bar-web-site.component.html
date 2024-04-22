@@ -1,0 +1,42 @@
+<div class="wrapper">
+    <div class="sidebar" data-color="white" data-active-color="danger">
+        <div class="sidebar-wrapper">
+            <div class="logo">
+              <a href="http://www.creative-tim.com" class="simple-text logo-mini">
+                <div class="logo-image-small">
+                  <img src="https://www.heart-of-carthage-dubai.com/assets/images/logoHOCD.png">
+                </div>
+              </a>
+              <a href="" class="simple-text logo-normal">
+              Admim 
+              </a>
+            </div>
+              <ul class="nav">
+                
+                 
+             
+              <li  routerLinkActive="active" class="" (click)="affLanding()">
+                <a >
+                    <i class="nc-icon nc-credit-card"></i>
+                    <p>LandingPage</p>
+                </a>
+            </li>
+              <li  routerLinkActive="active" class="" (click)="affWebSite()">
+                <a >
+                    <i class="nc-icon nc-diamond"></i>
+                    <p>Web Site</p>
+                </a>
+            </li>
+              </ul>
+          </div>
+    </div>
+    <div class="main-panel">
+        <navbar-cmp></navbar-cmp>
+        <div class="content">
+            <app-web-ste *ngIf="affLan"></app-web-ste>
+            <app-app-web-site-prametre *ngIf="affWeb"></app-app-web-site-prametre>
+        </div>
+        <footer-cmp></footer-cmp>
+    </div>
+</div>
+<fixedplugin-cmp></fixedplugin-cmp>

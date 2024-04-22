@@ -9237,7 +9237,16 @@ img {
     height: 30px;
     overflow: hidden;
     border-radius: 50%;
-    margin-bottom: 15px; }
+    margin-bottom: 15px;
+     }
+    @keyframes fadeInOut {
+      0%, 100% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+    }
   .card .numbers {
     font-size: 2em; }
   .card .big-title {

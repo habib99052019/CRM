@@ -1,0 +1,202 @@
+<div class="row">
+    <div class="col-lg-12 ml-auto mr-auto">
+      <div class="row">
+        <div class="col-md-6">
+          <button class="btn btn-primary btn-block" >  Add New Lead </button>
+        </div>
+       
+        <div class="col-md-6">
+          <button class="btn btn-primary btn-block" >  All Leads </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" *ngIf="afNewLead">
+   
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">  Table New  leads</h4>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead class=" text-primary">
+                <th>date</th>
+                <th>
+                  Name
+                </th>
+                <th>
+                  Phone
+                </th>
+                <th>
+                Email
+                </th>
+                <th >
+                 platforme
+                </th>
+                
+                <th >
+                 Action
+                </th>
+              </thead>
+              <tbody>
+                <tr  *ngFor="let lead of tab; index as i">
+                  <td>{{lead.dateLead}}</td>
+                  <td>
+                   {{lead.name}}
+                  </td>
+                  <td>
+                   {{lead.phone}}
+                  </td>
+                  <td>
+                    {{lead.email}}
+                  </td>
+                  <td class="text-right">
+                   <p *ngIf="lead.isFacebook"> facebook</p>
+                   <p *ngIf="lead.isWebSite" > web site</p>
+                  </td>
+                
+                  <td class="text-right">
+                  
+                   <button (click)='info(i)'>info</button>
+                  </td>
+                </tr>
+                
+               
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="col-md-12">
+      <div class="card card-plain">
+        <div class="card-header">
+          <h4 class="card-title"> Table on Plain Background</h4>
+          <p class="card-category"> Here is a subtitle for this table</p>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead class=" text-primary">
+                <th>
+                  Name
+                </th>
+                <th>
+                  Country
+                </th>
+                <th>
+                  City
+                </th>
+                <th class="text-right">
+                  Salary
+                </th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    Dakota Rice
+                  </td>
+                  <td>
+                    Niger
+                  </td>
+                  <td>
+                    Oud-Turnhout
+                  </td>
+                  <td class="text-right">
+                    $36,738
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Minerva Hooper
+                  </td>
+                  <td>
+                    Curaçao
+                  </td>
+                  <td>
+                    Sinaai-Waas
+                  </td>
+                  <td class="text-right">
+                    $23,789
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Sage Rodriguez
+                  </td>
+                  <td>
+                    Netherlands
+                  </td>
+                  <td>
+                    Baileux
+                  </td>
+                  <td class="text-right">
+                    $56,142
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Philip Chaney
+                  </td>
+                  <td>
+                    Korea, South
+                  </td>
+                  <td>
+                    Overland Park
+                  </td>
+                  <td class="text-right">
+                    $38,735
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Doris Greene
+                  </td>
+                  <td>
+                    Malawi
+                  </td>
+                  <td>
+                    Feldkirchen in Kärnten
+                  </td>
+                  <td class="text-right">
+                    $63,542
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Mason Porter
+                  </td>
+                  <td>
+                    Chile
+                  </td>
+                  <td>
+                    Gloucester
+                  </td>
+                  <td class="text-right">
+                    $78,615
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Jon Porter
+                  </td>
+                  <td>
+                    Portugal
+                  </td>
+                  <td>
+                    Gloucester
+                  </td>
+                  <td class="text-right">
+                    $98,615
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  </div>
+ 

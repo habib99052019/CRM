@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { Service1Service } from 'app/services/service1.service';
 import { ToastrService } from "ngx-toastr";
 
 
@@ -9,7 +11,7 @@ import { ToastrService } from "ngx-toastr";
 })
 
 export class NotificationsComponent{
-  constructor(private toastr: ToastrService) {}
+  constructor(private toastr: ToastrService ,public router:Router ,public serv1:Service1Service ) {}
   showNotification(from, align) {
     const color = Math.floor(Math.random() * 5 + 1);
 
@@ -82,5 +84,10 @@ export class NotificationsComponent{
       default:
         break;
     }
+  }
+  navigateGrh(){
+  this.serv1.affDashbord=false
+  this.serv1.affGrh=true
+    this.router.navigate(["/dashboard"])
   }
 }

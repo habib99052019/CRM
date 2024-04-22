@@ -1,0 +1,289 @@
+<div class="row">
+  <div class="col-lg-4 col-md-4 col-sm-12" *ngFor="let emp of tabEmp; index as i">
+    <div class="card card-user">
+      <div class="image">
+        <!-- <img src="" alt="..."> -->
+      </div>
+      <div class="card-body">
+        <div class="author">
+          <a href="#">
+            <img class="avatar border-gray" src="https://static.vecteezy.com/ti/vecteur-libre/p3/14527697-icone-de-l-agent-immobilier-homme-style-plat-vectoriel.jpg" alt="...">
+            <h5 class="title">{{emp.name}} {{emp.lastName}}</h5>
+          </a>
+          <p class="description">
+            {{emp.email}}
+          </p>
+          <p class="description">
+            {{emp.phone}}
+          </p>
+        </div>
+        <!-- <p class="description text-center">
+          "I like the way you work it
+          <br> No diggity
+          <br> I wanna bag it up"
+        </p> -->
+      </div>
+      <div class="card-footer">
+        <hr>
+        <div class="button-container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-6 ml-auto">
+              <h6>{{numberMeeting(emp.login)}}
+                <br>
+                <small>All Mettings</small>
+              </h6>
+            </div>
+            <div class="col-lg-4 col-md-6 col-6 ml-auto mr-auto">
+              <h6>
+                <br>{{numberMeetingToday(emp.login)}}
+                <small>Meetings Today Valid</small>
+              </h6>
+            </div>
+            <div class="col-lg-3 mr-auto">
+              <h5>
+                <br> {{numberMeetingTodayNo(emp.login)}}
+                <small>Meetings Novalid Today</small>
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <hr>
+        <div class="button-container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-6 ml-auto">
+              <h6>{{numberLedsAncEmp(emp.login)}}
+                <br>
+                <small>All Leads</small>
+              </h6>
+            </div>
+            <div class="col-lg-4 col-md-6 col-6 ml-auto mr-auto">
+              <h6>
+                <br>{{numberLedsNewEmp(emp.login)}}
+                <small>Pending Leads</small>
+              </h6>
+            </div>
+            <div class="col-lg-3 mr-auto">
+              <h5>
+                <br> {{numberLedsAncEmpToday(emp.login)}}
+                <small>Leads Proceesd Today</small>
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">  Table Sales</h4>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead class=" text-primary">
+               <!-- <th>profil</th> -->
+                <th style="color: black">
+                  Name
+                </th>
+                <th style="color: black">
+                 New Leads
+                </th>
+                <th style="color: black">
+                  Leads Today
+                  </th>
+                <th style="color: black">
+                Leads
+                </th >
+               
+                <th style="color: black">
+                  Meeting
+                  </th>
+                  <th style="color: black">
+                    Meeting   Valid Today
+                    </th>
+                    <th style="color: black">
+                    Meeting No Valid Today
+                    </th>
+                    <th style="color: black">
+                       Presence Today
+                      </th>
+                    <th style="color: black"> Veiw More</th>
+              </thead>
+              <tbody>
+                <tr  *ngFor="let emp of tabEmp; index as i">
+
+                  <!-- <td> <img class="avatar border-gray" src="https://www.freeiconspng.com/thumbs/sales-icon/sales-icon-32.png" style ="width: 80px;height: 80px;" alt="..."></td> -->
+                  <td>{{emp.name}}</td> 
+                  <td>
+                    <button class="btn btn-sm btn-outline-danger btn-round btn-icon">{{numberLedsNewEmp(emp.login)}}</button>  
+                  
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-outline-primary btn-round btn-icon">  {{numberLedsAncEmpToday(emp.login)}}</button>
+                   
+                  </td>
+                  <td >
+                    <button class="btn btn-sm btn-outline-success btn-round btn-icon">  {{numberLedsAncEmp(emp.login)}}</button>
+                   
+                  </td>
+                 
+                  <td routerLink="/meetSales/{{emp.login}}">
+                    <button class="btn btn-sm btn-outline-success btn-round btn-icon">  {{numberMeeting(emp.login)}}</button>
+                   
+                  </td>
+                  <td >
+                    <button class="btn btn-sm btn-outline-primary btn-round btn-icon">  {{numberMeetingToday(emp.login)}}</button>
+                   
+                  </td>
+                  <td >
+                    <button class="btn btn-sm btn-outline-danger btn-round btn-icon">  {{numberMeetingTodayNo(emp.login)}}</button>
+                   
+                  </td>
+                  <td ><i class="nc-icon nc-check-2 text-success"></i></td>            
+
+                  <td>              
+                      <button  routerLink="/meetSales/{{emp.login}}" class="btn btn-sm btn-outline-primary btn-round btn-icon"><i class="fa fa-eye"></i></button>
+                  </td>
+                </tr>
+                
+               
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="col-md-12">
+      <div class="card card-plain">
+        <div class="card-header">
+          <h4 class="card-title"> Table on Plain Background</h4>
+          <p class="card-category"> Here is a subtitle for this table</p>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead class=" text-primary">
+                <th>
+                  Name
+                </th>
+                <th>
+                  Country
+                </th>
+                <th>
+                  City
+                </th>
+                <th class="text-right">
+                  Salary
+                </th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    Dakota Rice
+                  </td>
+                  <td>
+                    Niger
+                  </td>
+                  <td>
+                    Oud-Turnhout
+                  </td>
+                  <td class="text-right">
+                    $36,738
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Minerva Hooper
+                  </td>
+                  <td>
+                    Curaçao
+                  </td>
+                  <td>
+                    Sinaai-Waas
+                  </td>
+                  <td class="text-right">
+                    $23,789
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Sage Rodriguez
+                  </td>
+                  <td>
+                    Netherlands
+                  </td>
+                  <td>
+                    Baileux
+                  </td>
+                  <td class="text-right">
+                    $56,142
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Philip Chaney
+                  </td>
+                  <td>
+                    Korea, South
+                  </td>
+                  <td>
+                    Overland Park
+                  </td>
+                  <td class="text-right">
+                    $38,735
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Doris Greene
+                  </td>
+                  <td>
+                    Malawi
+                  </td>
+                  <td>
+                    Feldkirchen in Kärnten
+                  </td>
+                  <td class="text-right">
+                    $63,542
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Mason Porter
+                  </td>
+                  <td>
+                    Chile
+                  </td>
+                  <td>
+                    Gloucester
+                  </td>
+                  <td class="text-right">
+                    $78,615
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Jon Porter
+                  </td>
+                  <td>
+                    Portugal
+                  </td>
+                  <td>
+                    Gloucester
+                  </td>
+                  <td class="text-right">
+                    $98,615
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  </div>

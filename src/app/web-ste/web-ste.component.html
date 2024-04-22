@@ -1,0 +1,387 @@
+<div class="row">
+    <div class="col-md-8 ml-auto mr-auto">
+      <div class="update ml-auto mr-auto">
+        <button type="button" class="btn btn-primary btn-round" (click)="affAjoutL()">Add landing Page</button>
+      </div>
+      </div>
+      </div>
+<section>
+    <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header">
+              <h4 class="card-title"> Table Landing</h4>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table">
+                  <thead class=" text-primary">
+                    <th>
+                      Name
+                    </th>
+                    <th>
+                      Action
+                    </th>
+                    
+                  </thead>
+                  <tbody>
+                    <tr  *ngFor="let landing of tabLanding; index as i">
+                      <td>
+                       {{landing.name}}
+                      </td>
+                     
+                     
+                     
+                      <td class="text-right">
+                      
+             <button type="button" class="btn btn-primary btn-round" (click)="edit(landing._id)">Edit landing Page</button>
+        
+            <button type="button" class="btn btn-primary btn-round" (click)="delet(landing._id)">Delet landing Page</button>
+                      </td>
+                    </tr>
+                    
+                   
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="col-md-12">
+          <div class="card card-plain">
+            <div class="card-header">
+              <h4 class="card-title"> Table on Plain Background</h4>
+              <p class="card-category"> Here is a subtitle for this table</p>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table">
+                  <thead class=" text-primary">
+                    <th>
+                      Name
+                    </th>
+                    <th>
+                      Country
+                    </th>
+                    <th>
+                      City
+                    </th>
+                    <th class="text-right">
+                      Salary
+                    </th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        Dakota Rice
+                      </td>
+                      <td>
+                        Niger
+                      </td>
+                      <td>
+                        Oud-Turnhout
+                      </td>
+                      <td class="text-right">
+                        $36,738
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Minerva Hooper
+                      </td>
+                      <td>
+                        Curaçao
+                      </td>
+                      <td>
+                        Sinaai-Waas
+                      </td>
+                      <td class="text-right">
+                        $23,789
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Sage Rodriguez
+                      </td>
+                      <td>
+                        Netherlands
+                      </td>
+                      <td>
+                        Baileux
+                      </td>
+                      <td class="text-right">
+                        $56,142
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Philip Chaney
+                      </td>
+                      <td>
+                        Korea, South
+                      </td>
+                      <td>
+                        Overland Park
+                      </td>
+                      <td class="text-right">
+                        $38,735
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Doris Greene
+                      </td>
+                      <td>
+                        Malawi
+                      </td>
+                      <td>
+                        Feldkirchen in Kärnten
+                      </td>
+                      <td class="text-right">
+                        $63,542
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Mason Porter
+                      </td>
+                      <td>
+                        Chile
+                      </td>
+                      <td>
+                        Gloucester
+                      </td>
+                      <td class="text-right">
+                        $78,615
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Jon Porter
+                      </td>
+                      <td>
+                        Portugal
+                      </td>
+                      <td>
+                        Gloucester
+                      </td>
+                      <td class="text-right">
+                        $98,615
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+</section>
+  
+    <div class="row">
+    
+        <div class="col-md-12">
+          <div class="card card-user">
+            <div class="card-header">
+              <h3>Add Landing page</h3>
+              <h5 class="card-title">section 1</h5>
+            </div>
+            <div class="card-body">
+              <div>
+                <div class="row">
+                  <div class="col-md-5 pr-1">
+                    <div class="form-group">
+                      <label>Name of landing</label>
+                      <input type="text" class="form-control"  placeholder="Company"  [(ngModel)]="name">
+                    </div>
+                  </div>
+                  <div class="col-md-3 px-1">
+                    <div class="form-group">
+                      <label> Span title1</label>
+                      <input type="text" class="form-control" placeholder="title1" [(ngModel)]="title1">
+                    </div>
+                  </div>
+                  <div class="col-md-4 pl-1">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Number Gold title 1</label>
+                      <input type="text" class="form-control" placeholder="1"  [(ngModel)]="numberTitle1">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 pr-1">
+                      <div class="form-group">
+                        <label>title2</label>
+                        <input type="text" class="form-control"  placeholder="title2"  [(ngModel)]="title2">
+                      </div>
+                    </div>
+                    <div class="col-md-3 px-1">
+                      <div class="form-group">
+                        <label> Span title1</label>
+                        <input type="text" class="form-control" placeholder="title2" [(ngModel)]="numbertitle2">
+                      </div>
+                    </div>
+                    <div class="col-md-4 pl-1">
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">End title 2</label>
+                        <input type="text" class="form-control" placeholder="1"  [(ngModel)]="endTitle2">
+                      </div>
+                    </div>
+                  </div>
+                
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        
+        <div class="col-md-12">
+          <div class="card card-user">
+            <div class="card-header">
+              <h5 class="card-title">Section 2</h5>
+            </div>
+            <div class="card-body">
+              <div>
+               
+                <div class="row">
+                  <div class="col-md-6 pr-1">
+                    <div class="form-group">
+                      <label>tile1</label>
+                      <input type="text" class="form-control" placeholder="Title1"  [(ngModel)]="title1Section2">
+                    </div>
+                  </div>
+                  <div class="col-md-6 pl-1">
+                    <div class="form-group">
+                      <label>title2</label>
+                      <input type="text" class="form-control" placeholder="Title2"  [(ngModel)]="title2Section2">
+                    </div>
+                  </div>
+                </div>
+                
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        
+        <div class="col-md-12">
+          <div class="card card-user">
+            <div class="card-header">
+              <h5 class="card-title">Add Image</h5>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="exampleFormControlFile1">ajout image 1</label>
+                    <input  type="file" (change)="selectFile($event)"   />
+                       <img style="width: 30%;" [src]="imgSelected" alt="image_viewer" >
+                  
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        
+        <div class="col-md-12">
+          <div class="card card-user">
+            <div class="card-header">
+              <h5 class="card-title">Add Image2</h5>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="exampleFormControlFile1">ajout image 1</label>
+                    <input  type="file" (change)="selectFile2($event)"   />
+                       <img style="width: 30%;" [src]="imgSelected2" alt="image_viewer" >
+                  
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+     
+        <div class="col-md-12">
+          <div class="card card-user">
+            <div class="card-header">
+              <h5 class="card-title">Add position</h5>
+            </div>
+            <div class="card-body">
+              <div>
+               
+                <div class="row">
+                  <div class="col-md-4 pr-1">
+                    <div class="form-group">
+                      <label>Name Position</label>
+                      <input type="text" class="form-control" placeholder="Name Position" [(ngModel)]="objectOp.pos1">
+                    </div>
+                  </div>
+                  <div class="col-md-4 px-1">
+                    <div class="form-group">
+                      <label>Value</label>
+                      <input type="text" class="form-control" placeholder="Name Position" [(ngModel)]="objectOp.value1">
+                    </div>
+                  </div>
+                 
+                </div>
+                <div class="row">
+                  <div class="col-md-4 pr-1">
+                    <div class="form-group">
+                      <label>Name Position</label>
+                      <input type="text" class="form-control" placeholder="Name Position" [(ngModel)]="objectOp.pos2">
+                    </div>
+                  </div>
+                  <div class="col-md-4 px-1">
+                    <div class="form-group">
+                      <label>Value</label>
+                      <input type="text" class="form-control" placeholder="Name Position" [(ngModel)]="objectOp.value2">
+                    </div>
+                  </div>
+                 
+                </div>
+                <div class="row">
+                  <div class="col-md-4 pr-1">
+                    <div class="form-group">
+                      <label>Name Position</label>
+                      <input type="text" class="form-control" placeholder="Name Position" [(ngModel)]="objectOp.pos3">
+                    </div>
+                  </div>
+                  <div class="col-md-4 px-1">
+                    <div class="form-group">
+                      <label>Value</label>
+                      <input type="text" class="form-control" placeholder="Name Position" [(ngModel)]="objectOp.value3">
+                    </div>
+                  </div>
+                 
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <span>{{p}}</span>
+   
+      
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label>Video</label>
+            <input type="text" class="form-control" placeholder="Home Address" [(ngModel)]="video1">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label>Descreption</label>
+            <textarea class="form-control textarea">Desc ...</textarea>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="update ml-auto mr-auto">
+          <button type="submit" class="btn btn-primary btn-round" style="width: 100%;" (click)="addLanding()">Add Landing Page</button>
+        </div>
+      </div>

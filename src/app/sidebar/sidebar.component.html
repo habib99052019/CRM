@@ -1,5 +1,5 @@
 
-<div class="sidebar-wrapper">
+<div class="sidebar-wrapper" *ngIf="serv1.affDashbord" >
   <div class="logo">
     <a href="http://www.creative-tim.com" class="simple-text logo-mini">
       <div class="logo-image-small">
@@ -7,15 +7,75 @@
       </div>
     </a>
     <a href="https://www.creative-tim.com" class="simple-text logo-normal">
-     Heart Of Carthage
+    Admim 
     </a>
   </div>
-    <ul class="nav">
-        <li *ngFor="let menuItem of menuItems" routerLinkActive="active" class="{{menuItem.class}}">
-            <a [routerLink]="[menuItem.path]">
-                <i class="nc-icon {{menuItem.icon}}"></i>
-                <p>{{menuItem.title}}</p>
-            </a>
-        </li>
+    <ul class="nav" *ngIf="serv1.affAdmin"  >
+       
+       
+      <li routerlinkactive="active" class="active"><a href="#/dashboard"><i class="nc-bank nc-icon"></i><p>Dashboard</p></a></li>
+      <li routerlinkactive="active"><a routerLink="/table"><i class="nc-icon nc-single-02"></i><p>Leads</p></a></li>
+      <li routerlinkactive="active"><a routerLink="/sales"><i class="nc-icon nc-circle-10"></i><p>Sales</p></a></li>
+      <li routerlinkactive="active"><a href="https://analytics.google.com/analytics/web/#/p363521480/reports/intelligenthome"><i class="nc-icon nc-spaceship"></i><p>google Analytique</p></a></li>
+      <li routerlinkactive="active"><a href=""><i class="nc-icon nc-globe"></i><p>Zapier</p></a></li>
+
+      <li routerlinkactive="active"><a href="https://business.facebook.com/events_manager2/list/dataset/234288866010443/overview?business_id=272992527095568&amp;global_scope_id=272992527095568&amp;act=343354407516128&amp;nav_source=flyout_menu"><i class="nc-icon nc-book-bookmark"></i><p>Pixel Facebook</p></a></li>
+      <li routerlinkactive="active"><a href=""><i class="nc-icon nc-globe"></i><p>Google ads</p></a></li>
+      <li routerlinkactive="active"><a routerLink="/ancienLead"><i class="nc-icon nc-single-02"></i><p>Customers</p></a></li>
+      <li routerlinkactive="active"><a routerlink="/upgrade" routerLink="/upgrade"><i class="nc-icon nc-credit-card"></i><p>Pyement</p></a></li>
+      <li routerlinkactive="active" class="active"><a routerlink="/notifications" routerLink="/notifications"><i class="nc-icon nc-diamond"></i><p>Other Services</p></a></li>
+      <li routerlinkactive="active" class="active"><a routerlink="" routerLink="/notifications"><i class="nc-icon nc-bulb-63"></i><p>Data Analytique & AI</p></a></li>
+    </ul>
+    <ul class="nav" *ngIf="serv1.affSales"  >
+       
+       
+      <li routerlinkactive="active" class="active"><a href="#/dashSales"><i class="nc-bank nc-icon"></i><p>Dashboard</p></a></li>
+      <li routerlinkactive="active"><a routerLink="/tableLeadsSales"><i class="nc-icon nc-single-02"></i><p>Leads</p></a></li>
+            <li routerlinkactive="active"><a href="https://design-by-mohamed-aziz.web.app/home"><i class="nc-icon nc-single-02"></i><p>Customers</p></a></li>
+
+      <li routerlinkactive="active"><a routerLink="/tableLeadsSales"><i class="nc-icon nc-single-02"></i><p>Planing</p></a></li>
+     
+    </ul>
+</div>
+<div class="sidebar-wrapper" *ngIf="serv1.affGrh" >
+  <div class="logo">
+    <a href="http://www.creative-tim.com" class="simple-text logo-mini">
+      <div class="logo-image-small">
+        <img src="https://www.heart-of-carthage-dubai.com/assets/images/logoHOCD.png">
+      </div>
+    </a>
+    <a href="" class="simple-text logo-normal">
+    Admin
+    </a>
+    
+  </div>
+    <ul class="nav" >
+      <li routerlinkactive="active" class="active"><a ><i class="nc-bank nc-icon"></i><p>GRH</p></a></li>
+
+       
+    <li  routerLinkActive="active" class="">
+      <a routerLink="/user">
+          <i class="nc-icon nc-diamond"></i>
+          <p>Add Employers</p>
+      </a>
+  </li>
+  <li  routerLinkActive="active" class="">
+    <a routerLink="/listeEmployers">
+        <i class="nc-icon nc-diamond"></i>
+        <p>liste Employers</p>
+    </a>
+</li>
+<li  routerLinkActive="active" class="">
+  <a routerLink="/listeEmployers">
+      <i class="nc-icon nc-diamond"></i>
+      <p>Planing</p>
+  </a>
+</li>
+<li  routerLinkActive="active" class="">
+  <a routerLink="/listeEmployers">
+      <i class="nc-icon nc-diamond"></i>
+      <p>Meeting GRH</p>
+  </a>
+</li>
     </ul>
 </div>

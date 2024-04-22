@@ -1,4 +1,4 @@
-<div class="row">
+<!-- <div class="row">
   <div class="col-md-12">
     <div class="card">
       <div class="card-header">
@@ -90,7 +90,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 <div class="row">
   <div class="col-md-12">
     <div class="card">
@@ -99,8 +99,8 @@
           <div class="row">
             <div class="col-md-6 ml-auto mr-auto text-center">
               <h4 class="card-title">
-                Notifications Places
-                <p class="category">Click to view notifications</p>
+                Other Service
+                <p class="category">Click to view Sevices</p>
               </h4>
             </div>
           </div>
@@ -108,13 +108,13 @@
             <div class="col-lg-8 ml-auto mr-auto">
               <div class="row">
                 <div class="col-md-4">
-                  <button class="btn btn-primary btn-block" (click)="showNotification('top','left')">Top Left</button>
+                  <button class="btn btn-primary btn-block" (click)="showNotification('bottom','left')">   <i class="nc-icon nc-air-baloon"></i> <br> WatshappApi & Email</button>
                 </div>
                 <div class="col-md-4">
-                  <button class="btn btn-primary btn-block" (click)="showNotification('top','center')">Top Center</button>
+                  <button class="btn btn-primary btn-block" (click)="showNotification('bottom','center')">  <i class="nc-icon nc-atom"></i><br>Audience</button>
                 </div>
                 <div class="col-md-4">
-                  <button class="btn btn-primary btn-block" (click)="showNotification('top','right')">Top Right</button>
+                  <button class="btn btn-primary btn-block" (click)="showNotification('bottom','right')">  <i class="nc-icon nc-vector"></i> <br>SEO & AI</button>
                 </div>
               </div>
             </div>
@@ -123,17 +123,18 @@
             <div class="col-lg-8 ml-auto mr-auto">
               <div class="row">
                 <div class="col-md-4">
-                  <button class="btn btn-primary btn-block" (click)="showNotification('bottom','left')">Bottom Left</button>
+                  <button class="btn btn-primary btn-block" (click)="navigateGrh()"><i class="nc-icon nc-tile-56"></i> <br> GRH </button>
                 </div>
                 <div class="col-md-4">
-                  <button class="btn btn-primary btn-block" (click)="showNotification('bottom','center')">Bottom Center</button>
+                  <button class="btn btn-primary btn-block" (click)="showNotification('top','center')"><i class="nc-icon nc-box-2"></i> <br> Comtabliter & Facturation </button>
                 </div>
                 <div class="col-md-4">
-                  <button class="btn btn-primary btn-block" (click)="showNotification('bottom','right')">Bottom Right</button>
+                  <button class="btn btn-primary btn-block"  routerLink="/web&landing"><i class="nc-icon nc-laptop"></i> <br>WebSite&Landing </button>
                 </div>
               </div>
             </div>
           </div>
+        
         </div>
       </div>
     </div>

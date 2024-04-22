@@ -1,3 +1,22 @@
+<style>
+  .element {
+  
+ /* animation: fadeInOut 1s infinite;*/
+}
+.element3 {
+  
+ animation: fadeInOut 2s infinite;
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+</style>
 <div class="row">
   <div class="col-lg-3 col-md-6 col-sm-6">
     <div class="card card-stats">
@@ -5,13 +24,42 @@
         <div class="row">
           <div class="col-5 col-md-4">
             <div class="icon-big text-center icon-warning">
+              <!-- <i class="nc-icon nc-globe text-warning"></i> -->
+             
+            <img  src="https://cdn-icons-png.freepik.com/256/6234/6234652.png?semt=ais_hybrid" width="48" height="48">
+            </div>
+          </div>
+          <div class="col-7 col-md-8">
+            <div class="numbers">
+              <p class="card-category">New leads Today</p>
+              <p class="card-title">{{allNewToday}}
+                <p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer ">
+        <hr>
+        <div class="stats">
+          <i class="fa fa-refresh"></i><a  routerLink="/table" > veiw More  </a>
+        </div>
+      </div>
+    </div>
+  </div>
+   <!-- <div class="col-lg-3 col-md-6 col-sm-6">
+    <div class="card card-stats">
+      <div class="card-body ">
+        <div class="row">
+          <div class="col-5 col-md-4">
+            <div class="icon-big text-center icon-warning">
+            
               <i class="nc-icon nc-globe text-warning"></i>
             </div>
           </div>
           <div class="col-7 col-md-8">
             <div class="numbers">
-              <p class="card-category">Capacity</p>
-              <p class="card-title">150GB
+              <p class="card-category">New leads Web Site</p>
+              <p class="card-title">{{NombreLeadswebSite}}
                 <p>
             </div>
           </div>
@@ -20,76 +68,26 @@
       <div class="card-footer ">
         <hr>
         <div class="stats">
-          <i class="fa fa-refresh"></i> Update Now
+          <i class="fa fa-calendar-o"></i> <a  routerLink="/table"> veiw More  </a>
         </div>
       </div>
     </div>
-  </div>
+  </div>  -->
   <div class="col-lg-3 col-md-6 col-sm-6">
     <div class="card card-stats">
       <div class="card-body ">
         <div class="row">
           <div class="col-5 col-md-4">
             <div class="icon-big text-center icon-warning">
-              <i class="nc-icon nc-money-coins text-success"></i>
-            </div>
-          </div>
-          <div class="col-7 col-md-8">
-            <div class="numbers">
-              <p class="card-category">Revenue</p>
-              <p class="card-title">$ 1,345
-                <p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card-footer ">
-        <hr>
-        <div class="stats">
-          <i class="fa fa-calendar-o"></i> Last day
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-3 col-md-6 col-sm-6">
-    <div class="card card-stats">
-      <div class="card-body ">
-        <div class="row">
-          <div class="col-5 col-md-4">
-            <div class="icon-big text-center icon-warning">
-              <i class="nc-icon nc-vector text-danger"></i>
-            </div>
-          </div>
-          <div class="col-7 col-md-8">
-            <div class="numbers">
-              <p class="card-category">Errors</p>
-              <p class="card-title">23
-                <p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card-footer ">
-        <hr>
-        <div class="stats">
-          <i class="fa fa-clock-o"></i> In the last hour
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-3 col-md-6 col-sm-6">
-    <div class="card card-stats">
-      <div class="card-body ">
-        <div class="row">
-          <div class="col-5 col-md-4">
-            <div class="icon-big text-center icon-warning">
+              <!-- <i class="nc-icon nc-vector text-danger"></i> -->
               <i class="nc-icon nc-favourite-28 text-primary"></i>
-            </div>
+             
+            </div>   
           </div>
           <div class="col-7 col-md-8">
             <div class="numbers">
-              <p class="card-category">Followers</p>
-              <p class="card-title">+45K
+              <p class="card-category">Leads Proceesd Today</p>
+              <p class="card-title">{{NumberNotNewToday}}
                 <p>
             </div>
           </div>
@@ -98,36 +96,315 @@
       <div class="card-footer ">
         <hr>
         <div class="stats">
-          <i class="fa fa-refresh"></i> Update now
+          <i class="fa fa-clock-o"></i> <a  routerLink="/LeadTodayProessed" > veiw More  </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-6 col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">All Leads</h4>
+      </div>
+      <div class="card-body">
+        <ul class="list-unstyled team-members">
+          <li>
+            <div class="row">
+              <div class="col-md-2 col-2">
+                <div class="avatar">
+                  <img src="https://cdn-icons-png.flaticon.com/512/1312/1312139.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+          
+                   </div>
+              </div>
+              <div class="col-md-7 col-7">
+                <small>Leads Facebook </small>
+                <br />
+                <span class="text-muted">
+                 
+                </span>
+              </div>
+              <div class="col-md-3 col-3 text-right">
+                {{NombreLeadsFacebook}}             
+               </div>
+            </div>
+          </li>
+          <li>
+            <div class="row">
+              <div class="col-md-2 col-2">
+                <div class="avatar">
+                  <img src="https://cdn-icons-png.freepik.com/512/5339/5339184.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+             
+              </div>
+              </div>
+              <div class="col-md-7 col-7">
+               <small>Leads Web Site</small> 
+                <br />
+                <span class="text-muted">
+                  <!-- <strong>{{this.tableMetingToday.length }}</strong> -->
+                </span>
+              </div>
+              <div class="col-md-3 col-3 text-right">
+                {{NombreLeadswebSite}}             
+               </div>
+            </div>
+          </li>
+          <li>
+            <div class="row">
+              <div class="col-md-2 col-2">
+                <div class="avatar">
+                  <img src="https://cdn-icons-png.flaticon.com/512/3756/3756719.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                </div>
+              </div>
+              <div class="col-md-7 col-7">
+                <small>Pending Leads</small>
+                <br />
+                <span class="text-success">
+                  
+                </span>
+              </div>
+              <div class="col-md-3 col-3 text-right">
+    
+                        {{NumberNew}}   
+                      </div>
+            </div>
+          </li>
+          <li>
+            <div class="row">
+              <div class="col-md-2 col-2">
+                <div class="avatar">
+                  <img src="https://e7.pngegg.com/pngimages/726/283/png-clipart-lead-generation-sales-lead-inbound-marketing-computer-icons-marketing-blue-angle-thumbnail.png" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                </div>
+              </div>
+              <div class="col-md-7 col-7">
+             <small>All Leads </small>  
+                <br />
+                <span class="text-success">
+                  
+                </span>
+              </div>
+              <div class="col-md-3 col-3 text-right">
+                {{NombreAllLeads}}
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-6 col-sm-6">
+    <div class="card card-stats">
+      <div class="card-body ">
+        <div class="row">
+          <div class="col-5 col-md-4">
+            <div class="icon-big text-center icon-warning">
+              <i class="nc-icon nc-bookmark-2 text-danger"></i>
+            </div>
+          </div>
+          <div class="col-7 col-md-8">
+            <div class="numbers">
+              <p class="card-category">notification Pyement</p>
+              <p class="card-title">08/08/2024 Vps
+                <p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer ">
+        <hr>
+        <div class="stats">
+          <i class="fa fa-refresh"></i> <a  routerLink="/upgrade"> Upgrate Now </a>
         </div>
       </div>
     </div>
   </div>
 </div>
 <div class="row">
-  <div class="col-md-12">
-    <div class="card ">
-      <div class="card-header ">
-        <h5 class="card-title">Users Behavior</h5>
-        <p class="card-category">24 Hours performance</p>
+  <div class="col-lg-4 col-md-6 col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">Leads very Ready</h4>
       </div>
-      <div class="card-body ">
-        <canvas id=chartHours width="400" height="100"></canvas>
-      </div>
-      <div class="card-footer ">
-        <hr>
-        <div class="stats">
-          <i class="fa fa-history"></i> Updated 3 minutes ago
-        </div>
+      <div class="card-body">
+        <ul class="list-unstyled team-members">
+          <li *ngFor="let lead of tableRedyLead; index as i">
+            <div class="row">
+              <div class="col-md-2 col-2">
+                <div class="avatar " >
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv1Xuxfsm8LpdfwhSF_Yo4vduxy_60pUYH_uXuqrYl1Q&s" alt="Circle Image" class="img-circle img-no-padding img-responsive animation2">
+                </div>
+              </div>
+              <div class="col-md-7 col-7">
+                {{lead.name}}
+                <br />
+                <span class="text-muted">
+                  <small>{{lead.employer}}</small>
+                </span>
+              </div>
+              <div class="col-md-3 col-3 text-right element">
+                <button  routerLink="/lead/{{lead._id}}" class="btn btn-sm btn-outline-primary btn-round btn-icon"><i class="fa fa-eye"></i></button>
+              </div>
+            </div>
+          </li>
+          
+        </ul>
       </div>
     </div>
   </div>
+  <div class="col-lg-4 col-md-6 col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">Activities Today</h4>
+      </div>
+      <div class="card-body">
+        <ul class="list-unstyled team-members">
+          <li>
+            <div class="row">
+              <div class="col-md-2 col-2">
+                <div class="avatar">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSymhISGMURnZxChfHO42wppC7jhtR73kiN2x87eOpdlA&s" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                </div>
+              </div>
+              <div class="col-md-7 col-7">
+                Lead today
+                <br />
+                <span class="text-muted">
+                  <strong>{{this.tableLeadToday.length }}</strong>
+                </span>
+              </div>
+              <div class="col-md-3 col-3 text-right">
+                <button class="btn btn-sm btn-outline-success btn-round btn-icon" style="background: white;"><i class="nc-icon nc-minimal-up"></i></button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="row">
+              <div class="col-md-2 col-2">
+                <div class="avatar">
+                  <img src="https://st3.depositphotos.com/1688079/16330/i/450/depositphotos_163307894-stock-photo-meeting-room-icon-elegant-cyan.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                </div>
+              </div>
+              <div class="col-md-7 col-7">
+                Meeting Valide
+                <br />
+                <span class="text-muted">
+                  <strong>{{this.tableMetingToday.length }}</strong>
+                </span>
+              </div>
+              <div class="col-md-3 col-3 text-right">
+                <button class="btn btn-sm btn-outline-success btn-round btn-icon" style="background: white;"><i class="nc-icon nc-minimal-up"></i></button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="row">
+              <div class="col-md-2 col-2">
+                <div class="avatar">
+                  <img src="data:image/png;base64,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" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                </div>
+              </div>
+              <div class="col-md-7 col-7">
+                Messages
+                <br />
+                <span class="text-success">
+                  <strong>{{MessageToday}}</strong>
+                </span>
+              </div>
+              <div class="col-md-3 col-3 text-right">
+                <button class="btn btn-sm btn-outline-danger btn-round btn-icon" style="background: white;"><i class="nc-icon nc-minimal-down"></i></button>
+   
+                      </div>
+            </div>
+          </li>
+          <li>
+            <div class="row">
+              <div class="col-md-2 col-2">
+                <div class="avatar">
+                  <img src="data:image/png;base64,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" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                </div>
+              </div>
+              <div class="col-md-7 col-7">
+                Email
+                <br />
+                <span class="text-success">
+                  <strong>45</strong>
+                </span>
+              </div>
+              <div class="col-md-3 col-3 text-right">
+                <button class="btn btn-sm btn-outline-success btn-round btn-icon" style="background: white;"><i class="nc-icon nc-minimal-up"></i></button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-6 col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">Leads Today </h4>
+      </div>
+      <div class="card-body">
+        <ul class="list-unstyled team-members">
+          <li>
+            <div class="row">
+              <div class="col-md-2 col-2">
+                <div class="avatar">
+                  <img src="data:image/jpeg;base64,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" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                </div>
+              </div>
+              <div class="col-md-7 col-7">
+                Very Ready
+               
+              </div>
+              <div class="col-md-3 col-3 text-right element3">
+                <button class="btn btn-sm btn-outline-warning btn-round btn-icon" style="background: white;">{{this.redyNumberToday}}</button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="row">
+              <div class="col-md-2 col-2">
+                <div class="avatar">
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASIAAACuCAMAAAClZfCTAAAAA1BMVEUfoFUFBsAFAAAASElEQVR4nO3BMQEAAADCoPVPbQhfoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABeA8XKAAFZcBBuAAAAAElFTkSuQmCC" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                </div>
+              </div>
+              <div class="col-md-7 col-7">
+               Intersed
+               
+              </div>
+              <div class="col-md-3 col-3 text-right">
+                <button class="btn btn-sm btn-outline-success btn-round btn-icon">{{NumberIntestedToday}}</button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="row">
+              <div class="col-md-2 col-2">
+                <div class="avatar">
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAA1BMVEX/AAAZ4gk3AAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO8GxYgAAb0jQ/cAAAAASUVORK5CYII=" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                </div>
+              </div>
+              <div class="col-md-7 col-7">
+               Not Intersed
+               
+              </div>
+              <div class="col-md-3 col-3 text-right">
+                <button class="btn btn-sm btn-outline-danger btn-round btn-icon">{{NumberNotIntestedToday}}</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
 </div>
+
 <div class="row">
   <div class="col-md-4">
     <div class="card ">
       <div class="card-header ">
-        <h5 class="card-title">Email Statistics</h5>
+        <h5 class="card-title">Leads Statistics</h5>
         <p class="card-category">Last Campaign Performance</p>
       </div>
       <div class="card-body ">
@@ -135,14 +412,14 @@
       </div>
       <div class="card-footer ">
         <div class="legend">
-          <i class="fa fa-circle text-primary"></i> Opened
-          <i class="fa fa-circle text-warning"></i> Read
-          <i class="fa fa-circle text-danger"></i> Deleted
-          <i class="fa fa-circle text-gray"></i> Unopened
+          <i class="fa fa-circle text-primary"></i> Ready
+          <i class="fa fa-circle text-warning"></i> Intrested
+          <i class="fa fa-circle text-danger"></i>Not Intrested
+          <i class="fa fa-circle text-gray"></i> New
         </div>
         <hr>
         <div class="stats">
-          <i class="fa fa-calendar"></i> Number of emails sent
+          <i class="fa fa-calendar"></i> Date
         </div>
       </div>
     </div>
@@ -150,7 +427,7 @@
   <div class="col-md-8">
     <div class="card card-chart">
       <div class="card-header">
-        <h5 class="card-title">NASDAQ: AAPL</h5>
+        <h5 class="card-title">Compaigne</h5>
         <p class="card-category">Line Chart with Points</p>
       </div>
       <div class="card-body">
@@ -164,6 +441,25 @@
         <hr/>
         <div class="card-stats">
           <i class="fa fa-check"></i> Data information certified
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <div class="card ">
+      <div class="card-header ">
+        <h5 class="card-title">Users Behavior</h5>
+        <p class="card-category">7 day performance</p>
+      </div>
+      <div class="card-body ">
+        <canvas id=chartHours width="400" height="100"></canvas>
+      </div>
+      <div class="card-footer ">
+        <hr>
+        <div class="stats">
+          <i class="fa fa-history"></i> Updated 3 minutes ago
         </div>
       </div>
     </div>

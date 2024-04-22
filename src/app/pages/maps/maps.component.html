@@ -1,5 +1,5 @@
 
-<div class="row">
+<!-- <div class="row">
   <div class="col-md-12">
     <div class="card ">
       <div class="card-header ">
@@ -7,6 +7,111 @@
       </div>
       <div class="card-body ">
         <div id="map" class="map"></div>
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- <div class="row">
+  <div class="col-md-9">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">  Table Leades Proceesd Today</h4>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table">
+            <thead class=" text-primary">
+              <th>date</th>
+              <th>
+                Name
+              </th>
+              <th>
+                Phone
+              </th>
+              <th>
+              Email
+              </th>
+              <th >
+              statut
+              </th>
+              <th >
+                sales
+               </th>
+               
+               <th >
+                Messages
+               </th>
+              <th >
+               Veiw
+              </th>
+            </thead>
+            <tbody>
+              <tr  *ngFor="let lead of tab; index as i">
+                <td>{{lead.date}}</td>
+                <td>
+                 {{lead.name}}
+                </td>
+                <td>
+                 {{lead.phone}}
+                </td>
+                <td>
+                  {{lead.email}}
+                </td>
+                <td >
+                 <strong > {{lead.color}}</strong>
+                
+                </td>
+               <td>{{lead.employer}}</td>
+                <td  *ngIf="AffLastUpdate(i)">
+                  <small> {{fun1(i)}} {{fun2(i) }} </small>
+                </td>
+                <td  *ngIf="!AffLastUpdate(i)">
+                  <small> --- </small>
+                </td>
+               
+                <td>  <button class="btn btn-sm btn-outline-primary btn-round btn-icon"  routerLink="/lead/{{lead._id}}"><i class="fa fa-eye"></i></button></td>
+              </tr>
+              
+             
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+<div class="row">
+  <div class="col-lg-12 col-md-12 col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">Leads Processed Today</h4>
+      </div>
+      <div class="card-body">
+        <ul class="list-unstyled team-members">
+          <li *ngFor="let lead of tab; index as i">
+            <div class="row">
+              <div class="col-md-2 col-2">
+                <div class="avatar " >
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv1Xuxfsm8LpdfwhSF_Yo4vduxy_60pUYH_uXuqrYl1Q&s" alt="Circle Image" class="img-circle img-no-padding img-responsive animation2">
+                </div>
+              </div>
+              <div class="col-md-8 col-7">
+                {{lead.name}}
+                <br />
+                <span class="text-muted">
+                  <small style="color:brown;">{{lead.employer}}</small>
+                </span>
+                <br/>
+                <small> {{fun1(i)}}   {{fun2(i)}}    </small>
+                
+              </div>
+              <div class="col-md-2 col-3 text-right element">
+                <button  routerLink="/lead/{{lead._id}}" class="btn btn-sm btn-outline-primary btn-round btn-icon"><i class="fa fa-eye"></i></button>
+              </div>
+            </div>
+          </li>
+          
+        </ul>
       </div>
     </div>
   </div>

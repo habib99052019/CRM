@@ -138,7 +138,7 @@ if (day >= 10) {
        ob=res
       var tab=[]
       tab=ob
-     this.AllLeadsProssed= tab.filter(ele=>ele.color !=="3").length
+     // this.AllLeadsProssed= tab.filter(ele=>ele.color !=="3").length
        this.NombreAllLeads=ob.length  
     })
     
@@ -192,7 +192,7 @@ if (day >= 10) {
        this.NumberIntested=this.tabAll.filter(ele=>ele.color=="1").length
        this.NumberNotIntested=this.tabAll.filter(ele=>ele.color=="0").length 
        this.NumberNew=this.tabAll.filter(ele=>ele.color=="3").length
-      //  this.NumberNew=this.tabAll.filter(ele=>ele.color !="3").length
+       this.AllLeadsProssed=this.tabAll.filter(ele=>ele.color !="3").length
     })
     
       this.ht.get(this.baseurl1+"/lengthFacebook/").subscribe(res=>{
@@ -432,7 +432,7 @@ if (day >= 10) {
        this.NumberIntested=this.tabAll.filter(ele=>ele.color=="1").length
        this.NumberNotIntested=this.tabAll.filter(ele=>ele.color=="0").length 
        this.NumberNew=this.tabAll.filter(ele=>ele.color=="3").length
-      //  this.NumberNew=this.tabAll.filter(ele=>ele.color !="3").length
+      this.AllLeadsProssed=this.tabAll.filter(ele=>ele.color !="3").length
     })
   
       //hedhi matna7ihech

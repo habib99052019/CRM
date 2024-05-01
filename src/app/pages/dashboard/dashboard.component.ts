@@ -43,6 +43,7 @@ export class DashboardComponent implements OnInit{
   tabAllNew:any[]=[]
   allNewToday=0
   NumberNewToday=0
+  AllLeadsProssed=0
   public convertDateToDDMMYY() {
     var currentDate = new Date();
     // Créer un objet Date à partir de la chaîne de date fournie
@@ -135,6 +136,7 @@ if (day >= 10) {
       // console.log(res,"sad")
        var ob:any
        ob=res
+     this.AllLeadsProssed= ob.filter(ele=>ele.color !="3").length
        this.NombreAllLeads=ob.length  
     })
     

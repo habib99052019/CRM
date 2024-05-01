@@ -49,7 +49,7 @@ export class Table2Component implements OnInit{
         return this.tabMeetToady.filter(em=>em.employer==e && em.status=="0").length
     }
   numberLedsNewEmp(e:any){
-    return this.tabAncienLeads.filter(em=>em.employer==e  && e.color== "3" ).length
+    return this.tabAncienLeads.filter(em=>em.employer==e  && em.color== "3" ).length
   }
   numberLedsAncEmp(e:any){
    

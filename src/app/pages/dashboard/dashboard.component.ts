@@ -518,7 +518,7 @@ if (day >= 10) {
               '#ef8157'
             ],
             borderWidth: 0,
-            data: [this.NumberNewToday, this.NumberIntestedToday,  this.redyNumberToday this.NumberNotIntestedToday,]        
+            data: [this.NumberNewToday, this.NumberIntestedToday,  this.redyNumberToday, this.NumberNotIntestedToday,]        
           
             }]
         },

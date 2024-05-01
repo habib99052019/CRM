@@ -136,7 +136,9 @@ if (day >= 10) {
       // console.log(res,"sad")
        var ob:any
        ob=res
-     this.AllLeadsProssed= ob.filter(ele=>ele.color !="3").length
+      var tab=[]
+      tab=ob
+     this.AllLeadsProssed= tab.filter(ele=>ele.color !=="3").length
        this.NombreAllLeads=ob.length  
     })
     

@@ -170,6 +170,7 @@ if (day >= 10) {
       this.checkMettingToday()
       this.checkMesssageToday()
       this.checkLeadNewToday()
+      this.checkAllLeadFunc()
         this.ht.get("https://backendiheb2.onrender.com/backend/meet/all/validée").subscribe(res=>{
           // console.log(res,"sad")
            var ob:any
@@ -413,6 +414,30 @@ if (day >= 10) {
          this.checkRedy()
       }, 3000);
     }  
+  checkAllLeadFunc = ()=>{
+
+      // ektib lcode mte3ik lina
+                      
+   this.ht.get(this.baseurl2).subscribe(res=>{
+      // console.log(res,"sad")
+       var ob:any
+       ob=res
+       this.tabAll=ob
+       this.tabActivitToday=ob.filter(ele=>ele.dateUpdate==this.convertDateToDDMMYY)
+
+       this.NombreAllLeads=ob.length 
+       this.redyNumber=this.tabAll.filter(ele=>ele.color=="4").length
+       this.NumberIntested=this.tabAll.filter(ele=>ele.color=="1").length
+       this.NumberNotIntested=this.tabAll.filter(ele=>ele.color=="0").length 
+       this.NumberNew=this.tabAll.filter(ele=>ele.color=="3").length
+      //  this.NumberNew=this.tabAll.filter(ele=>ele.color !="3").length
+    })
+  
+      //hedhi matna7ihech
+      setTimeout(() => {
+         this.checkAllLeadFunc()
+      }, 5000);
+    } 
     checkMettingToday= ()=>{
 
       // ektib lcode mte3ik lina
